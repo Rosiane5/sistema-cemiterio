@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+     padding: 0; 
+    box-sizing: border-box; 
+    
+}
+
+body {
+     background-color: #E6EBEF;
+     font-family:'Inter', sans-serif;
+    
+      
+}
+
+  /*--Pagina inicial login */
+
+.home-page  {
+    
+    display: flex;
+  
+}
+
+.left, 
+.right {
+ flex: 1;
+ height: 100vh;
+
+
+}
+
+.left {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #A6D9EB;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  opacity: 80%;
+}
+
+.left img {
+
+ width: 75%;
+ height: 75%;
+ margin: auto 1px;
+ margin-left: 10%;
+ 
+}
+
+.for-login {
+  padding: auto 5%;
+;
+}
+
+#login-for {
+  padding:2% 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-group1 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+ .form-group1 label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #02143b;
+  margin-bottom:6px;
+}
+
+.form-group1 input {
+  outline: none;
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #DCE5EC;
+  margin-left: 8%;
+  box-shadow:5px 5px 5px  #456b79;
+}
+
+.link-login {
+  text-align: left;
+  text-decoration: none;
+  color: #02143b;
+  margin-right: 20%;
+  margin-bottom: 5px;
+}
+
+
+#login-for button {
+  width: 80px;
+  height: 45px;
+  text-align:center;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #0B6A8C;
+  border: 1px solid #FFFFFF;
+  color: #ffffff;
+  box-shadow:5px 5px 5px  #456b79;
+}
+
+   /*--Painel de controle */
+  .top-bar {
+  width: 100%;             
+  height: 59px;            
+  background-color: #A6D9EB;  
+  }
+
+  .app-container {
+     display: flex;
+  }
+
+  .sidebar {
+    background-color:  #A6D9EB;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);;
+    width: 200px;
+    height: 100vh;
+  }
+
+  .sidebar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding:0 8%;
+    margin: 1px;
+    width:200px;
+    height: 110px;
+  }
+
+  .sidebar-item a, i {
+    text-decoration: none;
+
+  }
+  .sidebar-item a, i {
+    color:  #456b79;
+  }
+
+ .sidebar-item a {
+  color: #000;
+  
+ }
+
+ #paineladm h1 {
+   text-align: center;
+ }

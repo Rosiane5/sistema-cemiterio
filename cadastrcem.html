@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Cemitério</title>
+     <link rel="stylesheet" href="css/style.css">
+     <script src="js/script.js"></script>
+</head>
+<body>
+    
+         <div class="panel">
+         <!-- Sidebar -->
+          <aside class="sidebar">
+            <a href="paineladm.html">Painel de Controle</a>
+            <a href="agendamento.html">Agendamentos</a>
+            <a href="registro.html">Registros</a>
+            <a href="cemiterio.html">Cemitérios</a>
+            <a href="sepultura.html">Sepulturas</a>
+            <a href="relatorio.html">Relatórios</a>
+            <a href="configuracao.html">Configurações</a>
+          </aside> 
+          <main>
+               <h1>Cadastro de Cemitério</h1>
+        <form action="#" method="post">
+
+            <!-- Identificação do cemitério -->
+            <fieldset>
+                <legend>Identificação</legend>
+                <label for="nome">Nome do Cemitério*</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="codigo">Código Interno</label>
+                <input type="text" id="codigo" name="codigo">
+
+                <label for="tipo">Tipo de Cemitério</label>
+                <select id="tipo" name="tipo">
+                    <option value="publico">Público</option>
+                    <option value="privado">Privado</option>
+                    <option value="municipal">Municipal</option>
+                    <option value="religioso">Religioso</option>
+                </select>
+            </fieldset>
+
+            <!-- Localização -->
+            <fieldset>
+                <legend>Localização</legend>
+                <label for="endereco">Endereço*</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro">
+
+                <label for="cidade">Cidade*</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="estado">UF*</label>
+                <input type="text" id="estado" name="estado" required>
+
+                <label for="cep">CEP*</label>
+                <input type="text" id="cep" name="cep" required>
+
+                <label for="referencia">Ponto de referência</label>
+                <input type="text" id="referencia" name="referencia">
+
+                <label for="gps">Coordenadas GPS</label>
+                <input type="text" id="gps" name="gps" placeholder="Latitude, Longitude">
+            </fieldset>
+
+            <!-- Estrutura e capacidade -->
+            <fieldset>
+                <legend>Estrutura e Capacidade</legend>
+                <label for="capacidade">Capacidade total*</label>
+                <input type="number" id="capacidade" name="capacidade" required>
+
+                <label for="ocupacao">Ocupação atual</label>
+                <input type="number" id="ocupacao" name="ocupacao">
+
+                <label>Tipos de sepulturas:</label>
+                <label><input type="checkbox" name="sepultura_tipo" value="jazigo"> Jazigo</label>
+                <label><input type="checkbox" name="sepultura_tipo" value="gaveta"> Gaveta</label>
+                <label><input type="checkbox" name="sepultura_tipo" value="cremacao"> Cremação</label>
+            </fieldset>
+
+            <!-- Contato e administração -->
+            <fieldset>
+                <legend>Contato e Administração</legend>
+                <label for="responsavel">Nome do responsável</label>
+                <input type="text" id="responsavel" name="responsavel">
+
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+
+                <label for="horario">Horário de funcionamento</label>
+                <input type="text" id="horario" name="horario" placeholder="Ex: 08:00 - 17:00">
+            </fieldset>
+
+            <!-- Documentação e observações -->
+            <fieldset>
+                <legend>Documentação e Observações</legend>
+                <label for="alvara">Alvará / registro oficial</label>
+                <input type="text" id="alvara" name="alvara">
+
+                <label for="certificados">Certificados ou autorizações</label>
+                <input type="text" id="certificados" name="certificados">
+
+                <label for="observacoes">Observações adicionais</label>
+                <textarea id="observacoes" name="observacoes" rows="4" placeholder="Regras, restrições, etc."></textarea>
+            </fieldset>
+
+            <!-- Botões -->
+            <div>
+                <button type="reset">Cancelar</button>
+                <button type="submit">Salvar Cemitério</button>
+            </div>
+        </form>
+          </main>
+</body>
+</html>

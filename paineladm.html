@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Controle</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+</head>
+<body>
+
+  <div class="top-bar">
+    <input type="file" accept="image/*" id="uploadPhoto">
+    <img id="previewPhoto" src="" alt="Foto do Gestor" />
+  </div>
+
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-item">
+        <a href="#paineladm"><i class="fas fa-tachometer-alt"></i> Painel</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="#agendamento"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="#registro"><i class="fas fa-file-alt"></i> Registro</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="#cemiterio"><i class="fas fa-monument"></i> Cemitério</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="#sepultura"><i class="fas fa-cross"></i> Sepulturas</a>
+      </div>
+      <div class="sidebar-item">
+      <a href="#configuracao"><i class="fas fa-cog"></i> Configuração</a>
+      </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="content">
+
+      <!-- Painel -->
+      <section id="paineladm">
+        <h1>Bem vindo, Gestor</h1>
+
+        <!-- Cards -->
+        <div class="crds-inf">
+          <div class="card capacity"></div>
+          <div class="card update"></div>
+          <div class="card tasks"></div>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="graphics">
+          <canvas id="geral-occupation"></canvas>
+          <canvas id="deathsMonth"></canvas>
+        </div>
+      </section>
+
+      <!-- Agendamento -->
+      <section id="agendamento">
+        <h1>Agendamentos</h1>
+        <div class="card calendar"></div>
+
+        <div class="new-appointment">
+          <div class="appointment">
+            <h2>Novo agendamento</h2>
+            <button name="button">+</button>
+
+            <form class="form-appointment">
+              <label>Cemitério</label>
+              <input type="text" id="deceased-form">
+
+              <label>Responsável</label>
+              <input type="text" id="responsible-form">
+
+              <label>Data</label>
+              <input type="date" id="date-form">
+
+              <label>Hora</label>
+              <input type="time" id="time-form">
+            </form>
+          </div>
+        </div>
+
+        <div class="scheduled-appointments">
+          <h2>Agendados</h2>
+          <input type="text" id="search-form" placeholder="Buscar por nome ou data 🔎">
+
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Data</th>
+                  <th>Hora</th>
+                  <th>Cemitério</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Registro -->
+      <section id="registro">
+        <h1>Registrar Sepultados</h1>
+        <div class="form-container">
+
+          <div class="form-group">
+            <label>Nome completo*</label>
+            <input type="text">
+
+            <label>Data de nascimento*</label>
+            <input type="date">
+
+            <label>RG</label>
+            <input type="number">
+
+            <label>CPF</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Data do falecimento</label>
+            <input type="date">
+
+            <label>Idade*</label>
+            <input type="number">
+
+            <label>Sexo*</label>
+            <input type="text">
+
+            <label>Estado civil</label>
+            <input type="text">
+          </div>
+
+          <div class="form-group">
+            <label>Nome da mãe*</label>
+            <input type="text">
+
+            <label>Nome do pai</label>
+            <input type="text">
+
+            <label>Profissão (opcional)</label>
+            <input type="text">
+          </div>
+
+          <div class="form-group">
+            <label>Certidão de óbito*</label>
+            <input type="number">
+
+            <label>Cartório</label>
+            <input type="text">
+
+            <label>Data da emissão*</label>
+            <input type="date">
+
+            <label>Número do prontuário</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Nacionalidade*</label>
+            <input type="text">
+
+            <label>UF*</label>
+            <input type="text">
+
+            <label>Cidade*</label>
+            <input type="text">
+
+            <label>CEP*</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Cemitério*</label>
+            <input type="text">
+
+            <label>Tipo de sepultura</label><br>
+            <label><input type="checkbox"> Jazigo</label>
+            <label><input type="checkbox"> Gaveta</label>
+            <label><input type="checkbox"> Cremação</label>
+
+            <label>Data do sepultamento</label>
+            <input type="date">
+
+            <label>Período de concessão</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Nome do Responsável*</label>
+            <input type="text">
+
+            <label>Grau de parentesco*</label>
+            <input type="text">
+
+            <label>Telefone*</label>
+            <input type="tel">
+
+            <label>Email*</label>
+            <input type="email">
+
+            <label>Endereço*</label>
+            <input type="text">
+
+            <label>UF*</label>
+            <input type="text">
+
+            <label>CEP*</label>
+            <input type="number">
+          </div>
+
+          <div class="file">
+            <label>Documentos</label>
+            <input type="file">
+          </div>
+
+          <div class="butom">
+            <button id="chancellor">Cancelar</button>
+            <button id="edit">Editar</button>
+            <button id="save">Salvar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cemitério -->
+      <section id="cemiterio">
+        <h1>Cemitério</h1>
+        <div class="container-cemetery">
+          <div class="reg-cemetery">
+            <input type="text" id="search-cemetery" placeholder="🔍 Pesquisar Cemitério">
+            <button type="button" id="search">Buscar</button>
+            <button type="button">+ Cadastrar Novo Cemitério</button>
+          </div>
+
+          <div class="result-cemetery">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cemitério</th>
+                  <th>Localização</th>
+                  <th>Capacidade</th>
+                  <th>Ocupação total</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sepulturas -->
+      <section id="sepultura">
+        <h1>Sepulturas</h1>
+
+        <div class="cards">
+          <div class="card total-grave"></div>
+          <div class="card occupied-grave"></div>
+          <div class="card available-grave"></div>
+          <div class="card reserved-grave"></div>
+        </div>
+
+        <div class="search-grave">
+          <input type="text" id="grave-search" placeholder="🔍 Pesquisar sepultura">
+          <button type="button" id="search">Buscar</button>
+          <button type="submit">+ Cadastrar sepultura</button>
+        </div>
+
+        <div class="result-cemetery">
+          <table>
+            <thead>
+              <tr>
+                <th>Nº Sepultura</th>
+                <th>Capacidade Total</th>
+                <th>Ocupadas</th>
+                <th>Disponíveis</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </section>
+
+      <!-- Configuração -->
+      <section id="configuracao">
+        <h1>Configurações</h1>
+
+        <section id="usuario">
+          <h2>Usuário</h2>
+          <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email">
+
+            <button type="submit">Salvar</button>
+          </form>
+        </section>
+
+        <section id="tema">
+          <h2>Tema</h2>
+          <form>
+            <label for="idioma">Idioma</label>
+            <select id="idioma">
+              <option value="pt">Português</option>
+              <option value="en">Inglês</option>
+            </select>
+
+            <label for="modo">Modo de exibição:</label>
+            <select id="modo">
+              <option value="claro">Claro</option>
+              <option value="escuro">Escuro</option>
+            </select>
+
+            <button type="submit">Salvar</button>
+          </form>
+        </section>
+
+        <section id="notificacoes">
+          <h2>Notificações</h2>
+          <form>
+            <label><input type="checkbox"> E-mail</label>
+            <label><input type="checkbox"> SMS</label>
+            <button type="submit">Salvar</button>
+          </form>
+        </section>
+
+        <section id="seguranca">
+          <h2>Segurança</h2>
+          <form>
+            <label for="senha">Nova senha:</label>
+            <input type="password" id="senha">
+
+            <label for="confirmSenha">Confirmar senha:</label>
+            <input type="password" id="confirmSenha">
+
+            <label><input type="checkbox"> Ativar 2FA</label>
+
+            <button type="submit">Salvar</button>
+          </form>
+        </section>
+      </section>
+
+      <!-- Rodapé -->
+      <footer>
+        <p>&copy; 2025 Seu Sistema</p>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

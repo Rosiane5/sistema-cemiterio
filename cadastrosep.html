@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castro de sepultura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+      <div class="panel">
+         <!-- Sidebar -->
+          <aside class="sidebar">
+            <a href="paineladm.html">Painel de Controle</a>
+            <a href="agendamento.html">Agendamentos</a>
+            <a href="registro.html">Registros</a>
+            <a href="cemiterio.html">Cemitérios</a>
+            <a href="sepultura.html">Sepulturas</a>
+            <a href="relatorio.html">Relatórios</a>
+            <a href="configuracao.html">Configurações</a>
+          </aside>
+          <main>
+            <h2>Cadastrar Sepultura</h2>
+            <form>
+            <label>Número da Sepultura:</label>
+            <input type="text" name="numero_sepultura">
+
+            <label>Cemitério:</label>
+            <select name="cemiterio">
+                <option value="">Selecionar</option>
+                <option value="cemiterio1">Cemitério 1</option>
+                <option value="cemiterio2">Cemitério 2</option>
+            </select>
+
+            <label>Quadra / Lote / Ala:</label><br>
+            <input type="text" name="quadra_lote_ala">
+
+            <label>Situação / Status:</label><br>
+            <select name="status">
+                <option value="">Selecionar</option>
+                <option value="ocupada">Ocupada</option>
+                <option value="disponivel">Disponível</option>
+            </select>
+
+            <label>Data de Ocupação:</label><br>
+            <input type="date" name="data_ocupacao">
+
+            <label>Tipo de Sepultura:</label>
+            <select name="tipo_sepultura">
+                <option value="">Selecionar</option>
+                <option value="individual">Individual</option>
+                <option value="familiar">Familiar</option>
+                <option value="jazigo">Jazigo</option>
+            </select>
+
+            <label>Profundidade / Tamanho:</label>
+            <input type="text" name="profundidade">
+
+            <h3>Dados do Ocupante</h3>
+
+            <label>Nome do Falecido:</label><br>
+            <input type="text" name="nome_falecido">
+
+            <label>Data de Nascimento:</label><br>
+            <input type="date" name="data_nascimento">
+
+            <label>Data de Óbito:</label><br>
+            <input type="date" name="data_obito">
+
+            <label>Número da Certidão de Óbito:</label><br>
+            <input type="text" name="certidao_obito">
+
+            <label>Observações:</label><br>
+            <textarea name="observacoes"></textarea>
+
+            <button type="submit">Salvar</button>
+            <button type="reset">Cancelar</button>
+            </form>
+          </main> 
+</body>
+</html>
